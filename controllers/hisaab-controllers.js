@@ -9,7 +9,7 @@ module.exports.hisaabPageControllers = async function(req,res){
 }
 
 module.exports.hisaabCreateControllers = async function(req,res){
-    // res.send("helyoo");
+  
     let {title,description,shareable,editpermissions,passcode,encrypted} = req.body;
 
       
