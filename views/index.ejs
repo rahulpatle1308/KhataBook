@@ -1,15 +1,14 @@
 <%- include('./partials/header.ejs') %>
-    <div class="logincontainer w-full h-[80%] flex items-center justify-center">
-        <div class="loginpanel">
-            <h3 class="text-2xl mb-3">Login</h3>
-            <form autocomplete="off" action="/login" class="flex flex-col gap-2 items-start" method="post">
-                <input class="block px-3 py-2 border-[1px] border-zinc-100 rounded-md" type="text"
-                    placeholder="Email or Username" name="email">
-                <input class="block px-3 py-2 border-[1px] border-zinc-100 rounded-md"  type="password"
-                    placeholder="password" name="password">
-                <input class="block px-4 py-2 bg-blue-500 rounded-md text-white" type="submit" value="Login">
-            </form>
-            <a class="mt-5 inline-block text-blue-500" href="/register">Don't have an account ?</a>
-        </div>
+<div class="logincontainer w-full min-h-screen fixed bg-gradient-to-r bg-green-50 via-teal-100 to-green-200 flex items-center justify-center">
+    <div class="loginpanel w-full mt-[-80px] max-w-lg h-[400px] bg-white p-8 rounded-xl shadow-xl">
+        <h3 class="text-3xl font-semibold text-center mb-6 text-teal-600">Login</h3>
+        <form autocomplete="off" action="/login" class="flex flex-col gap-4 items-center" method="post">
+            <input class="block w-full px-4 py-3 border-[1px] border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500" type="text" placeholder="Email or Username" name="email">
+            <input class="block w-full px-4 py-3 border-[1px] border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500" type="password" placeholder="Password" name="password">
+            <input class="block w-full px-4 py-3 mt-5 bg-teal-500 rounded-md text-white font-semibold hover:bg-teal-600 transition-all duration-200" type="submit" value="Login">
+        </form>
+        <a class="mt-4 inline-block text-teal-500 text-center hover:underline" href="/register">Don't have an account? Sign up here.</a>
     </div>
+</div>
+
     <%- include('./partials/footer.ejs') %>

@@ -11,8 +11,8 @@
 </head>
 
 <body>
-    <div class="navbar flex justify-between w-full px-20 py-10">
-        <h3>Khaatabook</h3>
+    <div class="navbar flex justify-between text-centre h-[70px] bg-green-200  w-full px-20 py-10">
+        <h3 class="text-xl font-bold mt-[-20px]">Khaatabook</h3>
        <% var error = typeof error !== "undefined" ? error : false %>
        <% if(error && error.length > 0) {%>
                  <div class="absolute top-10 left-1/2 -translate-x-1/2 -translate-y-1/2 transiton-all px-3 py-2 bg-red-500 rounded-md">
@@ -23,7 +23,7 @@
       <% } %>
         <% var isLoggedin = typeof isLoggedin !== "undefined" ? undefined : true %>
         <%  if(isLoggedin){ %>
-            <div class="links flex gap-4">
+            <div class="links flex mt-[-20px] gap-4">
                 <a href="/">Home</a>
                 <a href="/hisaab/create">Create new hisaab</a>
                 <a class="text-red-500" href="/logout">Logout</a>
