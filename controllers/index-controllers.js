@@ -129,3 +129,4 @@ module.exports.profileControllers = async function (req, res) {
     res.render("profile", { user: user, error: req.flash("error") });
 }
 
+

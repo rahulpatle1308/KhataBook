@@ -1,5 +1,7 @@
 <%- include('./partials/header.ejs') %>
-    <div class="w-full min-h-screen fixed bg-green-50 px-20 py-10">
+
+
+    <div class="w-full min-h-screen fixed bg-pink-50 px-20 py-10">
         <h1 class="text-3xl mb-4 capitalize">Hey, <%= user.name %> 👋🏻 </h1>
         <h3 class="opacity-50 mb-10">showing all hisaabs, till now.</h3>
         <div>
@@ -27,7 +29,7 @@
                 <div class="flex gap-10 items-center">
                     <div class="flex justify-center gap-2 items-start">
                        <% if(elem.encrypted) {%>
-                        <div class="px-3 py-2 rounded-md flex gap-2 items-center bg-blue-500 text-white">
+                        <div class="px-3 py-2 rounded-md flex gap-2 items-center bg-orange-500 text-white">
                             <i class="text-xs ri-lock-2-line"></i>
                             <h3 class="text-sm">Encrypted</h3>
                         </div>
@@ -46,13 +48,13 @@
                          <% }%>
 
                     </div>
-                    <h3 class="text-xs text-zinc-400">Created on <%= elem.createdAt.getDate() %>-<%=elem.createdAt.getMonth()+1%>-<%=elem.createdAt.getFullYear() %></h3>
+                    <h3 class="text-xs text-black">Created on <%= elem.createdAt.getDate() %>-<%=elem.createdAt.getMonth()+1%>-<%=elem.createdAt.getFullYear() %></h3>
                 </div> 
                 <div class="mt-3">
-                    <h3 class="font-medium text-lg">
+                    <h3 class="font-medium text-lg text-black">
                         <%= elem.title %> 
                     </h3>
-                    <a class="text-zinc-400 text-sm" href="/hisaab/view/<%= elem._id %>">view hisaab</a>
+                    <a class="text-zinc-600 text-md" href="/hisaab/view/<%= elem._id %>">view hisaab</a>
                 </div>
             </div>
 
@@ -62,6 +64,8 @@
        <% } %>
         </div>
     </div>
+
+
     <script>
         document.querySelector("#bydate")
             .addEventListener("click", function (event) {
