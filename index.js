@@ -14,7 +14,7 @@ const flash = require("connect-flash");
 const expressSession = require("express-session");
 
 app.use(expressSession({
-    secret: 'anmolpandey', // Replace with a secure key
+    secret: 'anmolpandey', 
     resave: false,
     saveUninitialized: true
 }));
@@ -40,4 +40,4 @@ process.on('uncaughtException',()=>{
     console.log("errorr")
 })
 
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT);
