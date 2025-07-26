@@ -8,6 +8,7 @@ module.exports.hisaabPageControllers = async function(req,res){
     res.render("create", {error:req.flash("error")});
 }
 
+
 module.exports.hisaabCreateControllers = async function(req,res){
   
     let {title,description,shareable,editpermissions,passcode,encrypted} = req.body;
@@ -45,6 +46,7 @@ module.exports.hisaabCreateControllers = async function(req,res){
     res.redirect("/profile");
 }
 
+
 module.exports.hisaabViewControllers = async function (req, res) {
     
     let hisaab = await hisaabModel.findOne({_id:req.params.id});
@@ -56,6 +58,7 @@ module.exports.hisaabViewControllers = async function (req, res) {
         return  res.render("hisaab",{hisaab});
     }
 }
+
 
 module.exports.passcodeVerifyControllers = async function (req, res) {
     let {passcode} = req.body;
@@ -71,6 +74,7 @@ module.exports.passcodeVerifyControllers = async function (req, res) {
     }
  }
 
+
  module.exports.hisaabShowControllers = async function(req,res){
     const verifiedUser = req.session.verifiedHisaab;
 
@@ -85,6 +89,7 @@ console.log(hisaab);
     res.render("hisaab",{hisaab});
     req.session.verifiedHisaab = null;
  }
+
  module.exports.hisaabDeleteControllers = async function (req, res) {
     let hisaab = await hisaabModel.findById(req.params.id);
     if(!hisaab){
@@ -96,13 +101,14 @@ console.log(hisaab);
    return res.redirect("/profile");
  }
 
+
  module.exports.hisaabEditControllers = async function (req, res) {
 
     let hisaab = await hisaabModel.findOne({_id:req.params.id});
     res.render("edit",{hisaab,error:req.flash("error")});
  }
 
- 
+
  module.exports.hisaabPostEditControllers = async function (req, res) {
     let {title,description,shareable,editpermissions,passcode,encrypted} = req.body;
     
